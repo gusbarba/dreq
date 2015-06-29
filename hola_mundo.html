@@ -1,0 +1,30 @@
+<body>
+
+<h2 class="hola">hola mundo!</h2>
+<h2 class="chau">chau mundo!</h2>
+
+<script src="jquery-2.1.1.js"></script>
+<script src="dreq.js"></script>
+<script src="educado.js"></script>
+<script>
+
+dreq.require("saludo",["alert.hola"],function(hola){
+		$(".hola").on("click",function(){
+			hola.show();
+			console.log("page: " + $.fn.jquery);
+		});
+});
+
+dreq.require("despedida",["alert.chau"],function(chau){
+		$(".chau").on("click",function(){
+			chau.show();
+			console.log("page: " + $.fn.jquery);
+		});
+});
+
+</script>
+
+</body>
+
+
+
